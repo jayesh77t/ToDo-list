@@ -4,7 +4,9 @@ A simple and responsive To-Do List web app built using HTML, CSS, and JavaScript
 
 📝 Features
 ✍️ Add and manage tasks
+
 ⏫ Set task priority (High, Medium, Low)
+
 📅 Assign due dates
 🗑️ Delete completed or unnecessary tasks
 💾 Local storage support (tasks persist after refresh)
