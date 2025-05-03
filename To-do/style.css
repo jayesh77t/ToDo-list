@@ -1,0 +1,161 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 700px;  /* Increased max width */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 5px; /* Add spacing */
+}
+
+#prioritySelect, #dueDateInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 5px;
+    width: 120px; /* Fixed width */
+}
+
+#addButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addButton:hover {
+    background-color: #3e8e41;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskList li:last-child {
+    border-bottom: none;
+}
+
+.task-text {
+    flex: 1;
+    word-break: break-word; /* Prevent overflow */
+}
+
+.task-details {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-button, .complete-button, .edit-button {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.complete-button {
+    background-color: #4CAF50; /* Green */
+}
+
+.edit-button {
+    background-color: #2196F3; /* Blue */
+}
+
+.delete-button:hover, .complete-button:hover, .edit-button:hover {
+    opacity: 0.8;
+}
+
+.priority-high {
+    background-color: rgba(255, 0, 0, 0.1); /* Light red */
+}
+
+.priority-medium {
+    background-color: rgba(255, 255, 0, 0.1); /* Light yellow */
+}
+
+.priority-low {
+    background-color: rgba(0, 255, 0, 0.1); /* Light green */
+}
+
+.editing {
+    background-color: #e0f7fa; /* Light cyan/aqua */
+}
+
+.editing .task-text {
+    display: none; /* Hide the text when editing */
+}
+
+.editing .edit-input {
+    display: inline-block; /* Show the input when editing */
+    width: calc(100% - 120px); /* Adjust width */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-input {
+    display: none; /* Initially hidden */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .input-container {
+        flex-direction: column; /* Stack inputs on smaller screens */
+    }
+
+    #taskInput, #prioritySelect, #dueDateInput, #addButton {
+        margin-bottom: 5px;
+        margin-right: 0; /* Remove right margin when stacked */
+        width: 100%;
+    }
+}
